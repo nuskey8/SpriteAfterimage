@@ -64,7 +64,8 @@ Alternatively, open Packages/manifest.json and add the following to the dependen
 | `Fade`                 | The alpha value of the afterimage relative to its elapsed time                                     |
 | `Use Unscaled Time`    | When enabled, it is not affected by `Time.timeScale`                                               |
 | `Shader`               | The shader used to render afterimages                                                              |
-| `Sorting Order Offset` | The value added to the Sorting Order of the original SpriteRenderer                                |
+| `Sorting Layer`        | Sorting Layer used to render afterimages                                                            |
+| `Order in Layer`       | Order in Layer used to render afterimages                                                           |
 
 ## GPU Instancing
 
