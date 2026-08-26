@@ -64,7 +64,8 @@ https://github.com/nuskey8/SpriteAfterimage.git?path=Assets/SpriteAfterimage
 | `Fade`                 | 残像の経過時間に対するalpha値                                             |
 | `Use Unscaled Time`    | 有効にすると`Time.timeScale`の影響を受けない                              |
 | `Shader`               | 残像の描画に使用するShader                                                |
-| `Sorting Order Offset` | 元SpriteRendererのSorting Orderへ加算する値                               |
+| `Sorting Layer`        | 残像を描画するSorting Layer                                               |
+| `Order in Layer`       | 残像を描画するOrder in Layer                                              |
 
 ## GPUインスタンシング
 
