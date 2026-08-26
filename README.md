@@ -3,7 +3,7 @@
 [![GitHub license](https://img.shields.io/github/license/nuskey8/SpriteAfterimage)](LICENSE)
 [![Unity](https://img.shields.io/badge/Unity-6000.5%2B-black?logo=unity&logoColor=white)]()
 
-English | [日本語](README.md)
+English | [日本語](README.ja.md)
 
 ![demo](docs/demo.gif)
 
