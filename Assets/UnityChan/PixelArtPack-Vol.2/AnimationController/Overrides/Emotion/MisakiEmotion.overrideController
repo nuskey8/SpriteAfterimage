@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: MisakiEmotion
+  m_Controller: {fileID: 9100000, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7417158, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2ae91d7dee74e450da66826d4e062811, type: 2}
+  - m_OriginalClip: {fileID: 7407020, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 58642d1bfd36246b5b99a6820b13daa2, type: 2}
+  - m_OriginalClip: {fileID: 7461466, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3d5c3ab18b5914a3883d4008c970bbed, type: 2}
+  - m_OriginalClip: {fileID: 7427752, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d8614475cbf804b73b460e49559d8d1b, type: 2}
+  - m_OriginalClip: {fileID: 7492118, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2f2085ade84a74453b4b32fcd30f88f5, type: 2}

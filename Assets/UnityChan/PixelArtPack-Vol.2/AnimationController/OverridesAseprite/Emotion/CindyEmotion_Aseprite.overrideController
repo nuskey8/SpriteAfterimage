@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CindyEmotion_Aseprite
+  m_Controller: {fileID: 9100000, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7461466, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: 6969540719418756458, guid: b1a364c2a6b797941bb128d56fe72b60, type: 3}
+  - m_OriginalClip: {fileID: 7417158, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: -3937340950366788920, guid: 2d54dc79bbd28f9439321ee130e3b7ca, type: 3}
+  - m_OriginalClip: {fileID: 7407020, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: 3477706561425968313, guid: 32bba391593570544a2f9f4bf5addb9c, type: 3}
+  - m_OriginalClip: {fileID: 7427752, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: 2674779508899520852, guid: 489b3e25627f40740b59102345ac4848, type: 3}
+  - m_OriginalClip: {fileID: 7492118, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: -7890485661170654480, guid: 1ddf2eb8fef3a354ebfa5d61771d97e1, type: 3}

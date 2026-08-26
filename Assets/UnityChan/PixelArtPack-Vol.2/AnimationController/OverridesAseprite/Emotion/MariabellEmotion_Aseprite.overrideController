@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MariabellEmotion_Aseprite
+  m_Controller: {fileID: 9100000, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7461466, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: -4528930658359980630, guid: bbd891883a0e7be47b49ca82d0cc7261, type: 3}
+  - m_OriginalClip: {fileID: 7417158, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: -91346814885871361, guid: 808bd91e0db3acd439ca70e9d7f70e85, type: 3}
+  - m_OriginalClip: {fileID: 7407020, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: -6085120854885590851, guid: dc3bc71668f479342af278897db2d2fa, type: 3}
+  - m_OriginalClip: {fileID: 7427752, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: 5133757339118978890, guid: a3bdfb6c9fd4d4640b4bc6d73d466cc2, type: 3}
+  - m_OriginalClip: {fileID: 7492118, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: -5459370560972284888, guid: d07f5d845f0e34149a33464ab29f2202, type: 3}

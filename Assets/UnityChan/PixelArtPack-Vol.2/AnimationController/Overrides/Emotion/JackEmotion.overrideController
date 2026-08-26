@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: JackEmotion
+  m_Controller: {fileID: 9100000, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7417158, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f968f6c7dd74d4980a33110bc415c626, type: 2}
+  - m_OriginalClip: {fileID: 7407020, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ad7a55804a7ea4b01a9f78a874ddb5d3, type: 2}
+  - m_OriginalClip: {fileID: 7461466, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c672339761af545e1b0d7a71958bff70, type: 2}
+  - m_OriginalClip: {fileID: 7427752, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f670e4fdb066348b6a49ce46c790b200, type: 2}
+  - m_OriginalClip: {fileID: 7492118, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c672339761af545e1b0d7a71958bff70, type: 2}

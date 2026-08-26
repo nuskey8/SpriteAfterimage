@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UnitychanEmotion_Aseprite
+  m_Controller: {fileID: 9100000, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7461466, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: 611967933960879018, guid: 79e83f414cfadaa46802349b4933b008, type: 3}
+  - m_OriginalClip: {fileID: 7417158, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: 4030481667935285010, guid: b8edfb45c102bd54596819bda460fe4e, type: 3}
+  - m_OriginalClip: {fileID: 7407020, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: -2789675885211030753, guid: 60b754954c43dc4439bd2c2f1d334fd6, type: 3}
+  - m_OriginalClip: {fileID: 7427752, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: 5474963403793497221, guid: 7238b6f8ed28cdc4fb79b7ebb624ff35, type: 3}
+  - m_OriginalClip: {fileID: 7492118, guid: 2a16be949b36b41a7885603954b3025c, type: 2}
+    m_OverrideClip: {fileID: -5423556266679262877, guid: f420d94983e161b4985926f3a32f4818, type: 3}
