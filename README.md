@@ -56,7 +56,7 @@ Alternatively, open Packages/manifest.json and add the following to the dependen
 | Property               | Description                                                                                        |
 | ---------------------- | -------------------------------------------------------------------------------------------------- |
 | `Source`               | The SpriteRenderer used as the source for recording afterimages                                    |
-| `Emittion Enabled`     | Whether to emit new afterimages                                                                    |
+| `Emission Enabled`     | Whether to emit new afterimages                                                                    |
 | `Emit Interval`        | The interval (in seconds) at which afterimages are recorded                                        |
 | `Lifetime`             | The duration (in seconds) that each afterimage is displayed                                        |
 | `Color`                | The color of the afterimage                                                                        |
