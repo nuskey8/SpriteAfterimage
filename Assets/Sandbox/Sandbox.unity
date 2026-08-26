@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteAfterImage
   source: {fileID: 478013270}
+  emissionEnabled: 1
   emitInterval: 0.05
   lifetime: 0.3
   color: {r: 0.47450984, g: 0.7376613, b: 1, a: 0.7}
@@ -293,7 +294,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   useUnscaledTime: 0
   shader: {fileID: 4800000, guid: a37103f7743294a5cb36790469f448f3, type: 3}
-  sortingOrderOffset: -1
+  sortingLayerID: 0
+  orderInLayer: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
