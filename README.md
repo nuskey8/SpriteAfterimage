@@ -1,5 +1,7 @@
 # SpriteAfterimage
 
+High-performance afterimage effect for Unity 2D using GPU instancing
+
 [![GitHub license](https://img.shields.io/github/license/nuskey8/SpriteAfterimage)](LICENSE)
 [![Unity](https://img.shields.io/badge/Unity-6000.5%2B-black?logo=unity&logoColor=white)]()
 
