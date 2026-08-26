@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 /// <summary>
 /// The SpriteAfterImage component renders a sprite afterimage effect using the RenderSprite API.
@@ -20,7 +21,6 @@ public sealed class SpriteAfterimage : MonoBehaviour
     [SerializeField]
     SpriteRenderer source;
 
-    [Header("Settings")]
     [SerializeField]
     bool emissionEnabled = true;
 
@@ -42,15 +42,14 @@ public sealed class SpriteAfterimage : MonoBehaviour
     [SerializeField]
     bool useUnscaledTime;
 
-    [Header("Rendering")]
     [SerializeField]
     Shader shader;
 
-    [Tooltip(
-        "Added to the source SpriteRenderer's sorting order. Use a negative value to draw behind it."
-    )]
     [SerializeField]
-    int sortingOrderOffset = -1;
+    int sortingLayerID;
+
+    [SerializeField]
+    int orderInLayer;
 
     Snapshot[] snapshots;
     int nextSnapshot;
@@ -95,6 +94,18 @@ public sealed class SpriteAfterimage : MonoBehaviour
     {
         source = GetComponent<SpriteRenderer>();
         shader = Shader.Find("SpriteAfterimage/Unlit");
+        var detectedSortingGroup = source != null ? source.GetComponentInParent<SortingGroup>() : null;
+
+        if (detectedSortingGroup != null)
+        {
+            sortingLayerID = detectedSortingGroup.sortingLayerID;
+            orderInLayer = detectedSortingGroup.sortingOrder;
+        }
+        else if (source != null)
+        {
+            sortingLayerID = source.sortingLayerID;
+            orderInLayer = source.sortingOrder;
+        }
     }
 
     void Awake()
@@ -272,8 +283,8 @@ public sealed class SpriteAfterimage : MonoBehaviour
         {
             layer = source.gameObject.layer,
             renderingLayerMask = source.renderingLayerMask,
-            sortingLayerID = source.sortingLayerID,
-            sortingOrder = source.sortingOrder + sortingOrderOffset,
+            sortingLayerID = sortingLayerID,
+            sortingOrder = orderInLayer,
             shadowCastingMode = source.shadowCastingMode,
             receiveShadows = source.receiveShadows,
             lightProbeUsage = source.lightProbeUsage,
