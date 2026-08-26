@@ -1,0 +1,9 @@
+{
+    "name": "com.nuskey8.spriteafterimage",
+    "version": "1.0.0",
+    "displayName": "Sprite Afterimage",
+    "description": "High-performance afterimage effect for Unity 2D using GPU instancing",
+    "author": {
+        "name": "nuskey"
+    }
+}
