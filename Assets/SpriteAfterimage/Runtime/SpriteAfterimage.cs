@@ -21,6 +21,9 @@ public sealed class SpriteAfterimage : MonoBehaviour
     SpriteRenderer source;
 
     [Header("Settings")]
+    [SerializeField]
+    bool emissionEnabled = true;
+
     [SerializeField, Min(0.001f)]
     float emitInterval = 0.05f;
 
@@ -55,6 +58,23 @@ public sealed class SpriteAfterimage : MonoBehaviour
     Material instancedMaterial;
 
     readonly Dictionary<Sprite, List<InstanceData>> batches = new();
+
+    /// <summary>
+    /// Controls whether afterimages are emitted.
+    /// </summary>
+    public bool EmissionEnabled
+    {
+        get => emissionEnabled;
+        set
+        {
+            if (emissionEnabled == value)
+                return;
+
+            emissionEnabled = value;
+            if (emissionEnabled)
+                emitTimer = 0f;
+        }
+    }
 
     [StructLayout(LayoutKind.Sequential)]
     struct InstanceData
@@ -93,7 +113,7 @@ public sealed class SpriteAfterimage : MonoBehaviour
         lifetime = Mathf.Max(0.001f, lifetime);
 
         if (Application.isPlaying)
-            RebuildBuffer();
+            EnsureBuffer();
     }
 
     void LateUpdate()
@@ -117,7 +137,7 @@ public sealed class SpriteAfterimage : MonoBehaviour
     /// </summary>
     public void Emit()
     {
-        if (source == null || !source.enabled || source.sprite == null)
+        if (!emissionEnabled || source == null || !source.enabled || source.sprite == null)
             return;
 
         EnsureBuffer();
@@ -158,6 +178,9 @@ public sealed class SpriteAfterimage : MonoBehaviour
 
     void EmitSnapshots(float deltaTime)
     {
+        if (!emissionEnabled)
+            return;
+
         emitTimer -= deltaTime;
         if (emitTimer > 0f)
             return;
@@ -239,12 +262,7 @@ public sealed class SpriteAfterimage : MonoBehaviour
                 source.maskInteraction
             );
 
-            Graphics.RenderSprite(
-                in renderParams,
-                in spriteParams,
-                0,
-                snapshot.objectToWorld
-            );
+            Graphics.RenderSprite(in renderParams, in spriteParams, 0, snapshot.objectToWorld);
         }
     }
 
