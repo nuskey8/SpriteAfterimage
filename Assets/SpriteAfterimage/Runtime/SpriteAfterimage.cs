@@ -169,8 +169,15 @@ public sealed class SpriteAfterimage : MonoBehaviour
 
     void DrawSnapshots()
     {
-        if (!SystemInfo.supportsInstancing || !EnsureMaterial())
+        if (!EnsureMaterial())
             return;
+
+        var renderParams = CreateRenderParams();
+        if (!SystemInfo.supportsInstancing)
+        {
+            DrawSnapshotsWithoutInstancing(in renderParams);
+            return;
+        }
 
         foreach (var batch in batches.Values)
         {
@@ -205,7 +212,45 @@ public sealed class SpriteAfterimage : MonoBehaviour
             );
         }
 
-        var renderParams = new RenderParams(instancedMaterial)
+        foreach (var pair in batches)
+        {
+            if (pair.Value.Count == 0)
+                continue;
+
+            var spriteParams = new SpriteParams(pair.Key, Color.white, source.maskInteraction);
+            Graphics.RenderSpriteInstanced(in renderParams, in spriteParams, 0, pair.Value);
+        }
+    }
+
+    void DrawSnapshotsWithoutInstancing(in RenderParams renderParams)
+    {
+        for (int i = 0; i < snapshots.Length; i++)
+        {
+            ref var snapshot = ref snapshots[i];
+            if (snapshot.remaining <= 0f || snapshot.sprite == null)
+                continue;
+
+            var normalizedAge = 1f - Mathf.Clamp01(snapshot.remaining / lifetime);
+            var opacity = Mathf.Max(0f, fade.Evaluate(normalizedAge));
+            var spriteColor = new Color(1f, 1f, 1f, opacity);
+            var spriteParams = new SpriteParams(
+                snapshot.sprite,
+                spriteColor,
+                source.maskInteraction
+            );
+
+            Graphics.RenderSprite(
+                in renderParams,
+                in spriteParams,
+                0,
+                snapshot.objectToWorld
+            );
+        }
+    }
+
+    RenderParams CreateRenderParams()
+    {
+        return new RenderParams(instancedMaterial)
         {
             layer = source.gameObject.layer,
             renderingLayerMask = source.renderingLayerMask,
@@ -215,15 +260,6 @@ public sealed class SpriteAfterimage : MonoBehaviour
             receiveShadows = source.receiveShadows,
             lightProbeUsage = source.lightProbeUsage,
         };
-
-        foreach (var pair in batches)
-        {
-            if (pair.Value.Count == 0)
-                continue;
-
-            var spriteParams = new SpriteParams(pair.Key, Color.white, source.maskInteraction);
-            Graphics.RenderSpriteInstanced(in renderParams, in spriteParams, 0, pair.Value);
-        }
     }
 
     bool EnsureMaterial()
