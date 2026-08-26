@@ -282,9 +282,14 @@ public sealed class SpriteAfterimage : MonoBehaviour
 
     bool EnsureMaterial()
     {
-        var shader = this.shader != null ? this.shader : Shader.Find("SpriteAfterImage/Unlit");
         if (shader == null)
+        {
+            Debug.LogWarning(
+                "[SpriteAfterimage] SpriteAfterimage.shader is not assigned. Afterimages will not be rendered.",
+                this
+            );
             return false;
+        }
 
         if (instancedMaterial == null || instancedMaterial.shader != shader)
         {
