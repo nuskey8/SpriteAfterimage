@@ -53,17 +53,18 @@ Alternatively, open Packages/manifest.json and add the following to the dependen
 
 ![inspector](docs/inspector.png)
 
-| Property               | Description                                                               |
-| ---------------------- | ------------------------------------------------------------------------- |
-| `Source`               | The SpriteRenderer used as the source for recording afterimages           |
-| `Emit Interval`        | The interval (in seconds) at which afterimages are recorded               |
-| `Lifetime`             | The duration (in seconds) that each afterimage is displayed               |
-| `Color`                | The color of the afterimage                                               |
+| Property               | Description                                                                                        |
+| ---------------------- | -------------------------------------------------------------------------------------------------- |
+| `Source`               | The SpriteRenderer used as the source for recording afterimages                                    |
+| `Emittion Enabled`     | Whether to emit new afterimages                                                                    |
+| `Emit Interval`        | The interval (in seconds) at which afterimages are recorded                                        |
+| `Lifetime`             | The duration (in seconds) that each afterimage is displayed                                        |
+| `Color`                | The color of the afterimage                                                                        |
 | `Color Mode`           | `Tint`: Multiplies `Color` with the original sprite color <br> `Solid`: Fills with a solid `Color` |
-| `Fade`                 | The alpha value of the afterimage relative to its elapsed time            |
-| `Use Unscaled Time`    | When enabled, it is not affected by `Time.timeScale`                      |
-| `Shader`               | The shader used to render afterimages                                     |
-| `Sorting Order Offset` | The value added to the Sorting Order of the original SpriteRenderer       |
+| `Fade`                 | The alpha value of the afterimage relative to its elapsed time                                     |
+| `Use Unscaled Time`    | When enabled, it is not affected by `Time.timeScale`                                               |
+| `Shader`               | The shader used to render afterimages                                                              |
+| `Sorting Order Offset` | The value added to the Sorting Order of the original SpriteRenderer                                |
 
 ## GPU Instancing
 

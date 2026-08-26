@@ -56,6 +56,7 @@ https://github.com/nuskey8/SpriteAfterimage.git?path=Assets/SpriteAfterimage
 | 項目                   | 説明                                                                      |
 | ---------------------- | ------------------------------------------------------------------------- |
 | `Source`               | 残像の記録元となるSpriteRenderer                                          |
+| `Emittion Enabled`     | 新しい残像を生成するかどうか                                              |
 | `Emit Interval`        | 残像を記録する間隔（秒）                                                  |
 | `Lifetime`             | 各残像が表示される時間（秒）                                              |
 | `Color`                | 残像の色                                                                  |
