@@ -63,6 +63,10 @@ https://github.com/nuskey8/SpriteAfterimage.git?path=Assets/SpriteAfterimage
 | `Shader`               | 残像の描画に使用するShader                                                |
 | `Sorting Order Offset` | 元SpriteRendererのSorting Orderへ加算する値                               |
 
+## GPUインスタンシング
+
+デフォルトではSpriteAfterimageは同じSpriteの残像を`Graphics.RenderSpriteInstanced`で描画しますが、実行環境がGPUインスタンシングに非対応の場合は`Graphics.RenderSprite`で1枚ずつ描画します。これらの環境でパフォーマンスが問題になる場合は残像の数を少なく抑えることを推奨します。
+
 ## ライセンス
 
 [MIT](LICENSE)

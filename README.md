@@ -63,6 +63,10 @@ Alternatively, open Packages/manifest.json and add the following to the dependen
 | `Shader`               | The shader used to render afterimages                                     |
 | `Sorting Order Offset` | The value added to the Sorting Order of the original SpriteRenderer       |
 
+## GPU Instancing
+
+By default, `SpriteAfterimage` renders afterimages of the same sprite using `Graphics.RenderSpriteInstanced`; however, if the runtime environment does not support GPU instancing, it renders them individually using `Graphics.RenderSprite`. If performance becomes an issue in such environments, it is recommended to limit the number of afterimages.
+
 ## License
 
 [MIT](LICENSE)
